@@ -1,8 +1,10 @@
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  const { name, email, message } = await req.json();
 
+  const { name, email, message } = await req.json();
+    console.log(name, email, message);
+    
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -14,7 +16,7 @@ export async function POST(req) {
   const mailOptions = {
     from: email,
     to: process.env.GMAIL_ADDRESS,
-    subject: `New message from ${name}`,
+    subject: `New message from ${name} (${email})`,
     text: message,
   };
 
