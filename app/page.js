@@ -38,9 +38,12 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               className="border border-red-500 py-2 px-4 rounded hover:bg-red-500 hover:text-white"
             >
-              <a href="" target="_blank" rel="noopener noreferrer">
-                {" "}
-                My resume{" "}
+              <a
+                href="https://docs.google.com/document/d/180AN-HOa-KiCDH-jOuCzQWU6Wqs3oL3A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My resume
               </a>
             </motion.button>
           </div>
